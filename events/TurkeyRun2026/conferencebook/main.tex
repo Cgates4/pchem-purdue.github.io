@@ -1,0 +1,231 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Conference Booklet
+% LaTeX Template
+% Version 1.0 (22/12/2019)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% Authors:
+% Maxime Lucas (ml.maximelucas@gmail.com) 
+% Pau Clusella
+% Modifications for LaTeX Templates by Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% GNU General Public License v3.0
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	openany, % Allow chapters to start on odd and even pages
+	parskip=full, % Large space between paragraphs
+	12pt, % Default font size
+	letterpaper, % Paper size, use letterpaper for US letter size
+]{conferencebooklet} % Custom class defining the style and layout of the template
+\usepackage{hyperref}
+\usepackage{newfloat}
+\usepackage{mhchem}
+\DeclareFloatingEnvironment[name=talk,fileext=tlk]{talk}
+\DeclareFloatingEnvironment[name=nottalk,fileext=pos]{nottalk}
+\usepackage{multicol}
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	 COVER PAGE
+%----------------------------------------------------------------------------------------
+
+\includepdf{images/cover.pdf} % The cover for the booklet is included as a whole-page image, it can be a PDF or an image file but must be the same dimensions as the paper size
+
+%----------------------------------------------------------------------------------------
+%	 INFORMATION/COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+\thispagestyle{empty} % Suppress headers and footers on this page
+
+%~\vfill % Push text down
+%
+%\begin{center}	
+%	This is the short version of the booklet for print use. \\ Full abstracts with all authors, references, and figures can be found at:\\ \url{https://amcosconference.com/}
+%	
+%	This template originates from \url{LaTeXTemplates.com} and is based on the original version at:\\ \url{https://github.com/maximelucas/AMCOS\_booklet}
+%\end{center}
+%
+%\newpage
+
+%----------------------------------------------------------------------------------------
+%	 TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\tableofcontents
+
+%----------------------------------------------------------------------------------------
+%	 ABOUT CONFERENCE
+%----------------------------------------------------------------------------------------
+
+
+
+\includepdf[addtotoc={1,chapter,0,Sponsors,sponsors}]{images/sponsors.pdf}
+
+%----------------------------------------------------------------------------------------
+%	 TIMETABLE
+%----------------------------------------------------------------------------------------
+
+\chapter{Program}
+
+%CT: Contributed Talk, IS: Invited Speaker, KL: Keynote Lecture, IT: Invited Talk.
+\vspace{-24pt}
+\section{Friday, October 24}
+
+\begin{longtable}{|C{0.15\linewidth}| C{0.1\linewidth}|  C{0.3\linewidth} C{0.0\linewidth} C{0.4\linewidth}|}\hline	
+	\eventtype{4:00--6:00pm}{Registration and Poster Hanging}
+	\tablebreak{6:00pm}{Dinner}
+	\eventtype{7:30--7:40pm}{Introduction and Welcome}
+	\KL{7:40--8:20pm}{Colin Gates}{Loyola University}{\hyperlink{Gates.1}{Strategies for Extreme Growth in \emph{Chlorella}}}
+	\CT{8:20--8:40pm}{Nicholas Ferrari}{Louisiana State University}{\hyperlink{Ferrari.1}{Noisy Sunlight: Algal Acclimation to Stochastic Light}}
+	\CT{8:40--9:00pm}{Swarnali Mukherjee}{Oklahoma State University}{\hyperlink{Mukherjee.1}{Understanding \ce{CO2} uptake and proton pumping in cyanobacterial Photosynthetic Complex 1.}}
+	\CT{9:00--9:20pm}{Lydia Davies-Balogun}{Alabama State University}{\hyperlink{Davies-Balogun.1}{Biosorption and bioaccumulation of critical metals by algae}}
+	\eventtype{9:30pm}{Mixer and Poster Session}
+\end{longtable}
+
+%------------------------------------------------
+
+\section{Saturday, October 25}
+
+\begin{longtable}{|C{0.15\linewidth}| C{0.1\linewidth}|  C{0.3\linewidth} C{0.0\linewidth} C{0.4\linewidth}|}\hline	
+	\tablebreak{7:00am}{Breakfast}
+	\KL{9:00--9:40am}{Petra Fromme}{Arizona State University}{X-Ray and Neutron studies on Photosystem I and II}
+	\CT{9:40--10:00am}{Chris Brininger}{University of Wisconsin-Madison}{\hyperlink{Brininger.1}{Cryo-EM Structures of Photosystem I with Alternative
+			Quinones Reveals New Insight into Cofactor Selectivity}}
+	\CT{10:00--10:20am}{Sham Vera}{University of Indiana-Bloomington}{\hyperlink{Vera.1}{Understanding the HAD domain function of the SUPPRESSOR OF QUENCHING 1 protein in
+			photoprotection in \emph{Arabidopsis thaliana}}}
+	\tablebreak{10:20--10:40am}{Coffee}
+	\CT{10:40--11:00am}{Audrey Short}{Argonne National Laboratories}{\hyperlink{Short.1}{Eukaryotic Photosynthetic Thylakoid Biohybrids: Probing
+			Fundamental Interactions in Charge Accumulation}}
+	\CT{11:00--11:20am}{Maximino Emerson}{University of Wisconsin-Madison}{\hyperlink{Emerson.1}{A Structural Approach to Engineering Biohybrid Photocatalysis}}
+	\CT{11:20--11:40am}{Siva Naga Sai Damaraju}{Michigan State University}{\hyperlink{Damaraju.1}{Molecular Dynamics Insights into Photosystem I–Platinum
+			Biohybrids for Photocatalytic Hydrogen Production}}
+	\CT{11:40--12:00pm}{Samuel Snyder}{Argonne National Laboratory}{\hyperlink{Snyder.1}{Biohybrid Bacterial Microcompartment Shells as
+			Nanoreactors for Photocatalytic Hydrogen Evolution	}}
+	\CT{12:00--12:20pm}{Neetu Yadav}{Michigan State University}{\hyperlink{Yadav.1}{Tracking Photosynthetic Metabolite Transport Through Bacterial Microcompartments
+			Using Enhanced Sampling Simulations}}
+	\tablebreak{12:30pm}{Lunch}
+	\eventtype{Afternoon}{Free to explore Turkey Run State Park}
+	\eventtype{4:00--6:00pm}{Poster Session}
+	\tablebreak{6:00pm}{Dinner}
+	\CT{7:30--7:50pm}{Steven Romberger}{Hiram College}{\hyperlink{Romberger.1}{Steady-State P800 Oxidation Kinetics Indicate That
+			Heliobacterial Phototrophy is Light-Limited}}
+	\CT{7:50--8:10pm}{Himanshu Mehra}{University of Wisconsin-Madison}{\hyperlink{Mehra.1}{Biochemical analysis and structural predictions of
+		photosynthetic apparatus components in \emph{Acaryochloris marina} spectral types}}
+	\CT{8:10--8:30pm}{Jonathan Nguyen}{Michigan State University}{\hyperlink{Nguyen.1}{Molecular Simulation of Photosystem II and Phycobilisome
+			Interactions in Cyanobacteria}}
+	\CT{8:30--8:50pm}{Allison Squires}{University of Chicago}{\hyperlink{Squires.1}{Phycobilisome core architecture influences	photoprotective quenching by the Orange Carotenoid	Protein}}
+	%\IS{8:30--8:40pm}{Colin Gates}{Loyola University Chicago}{Remembering Jeffery Cameron}
+	%\IS{8:40--8:50pm}{Chris Gisriel}{University of Wisconsin}{Remembering Donald Bryant}
+	\eventtype{9:00pm}{Campfire, Drinks, and Poster Session }
+
+	
+\end{longtable}
+
+%------------------------------------------------
+
+\section{Sunday, October 26}
+
+
+\begin{longtable}{|C{0.15\linewidth}| C{0.1\linewidth}|  C{0.3\linewidth} C{0.0\linewidth} C{0.4\linewidth}|}\hline	
+	
+	\tablebreak{7:00am}{Breakfast}
+	\CT{9:00--9:20am}{Nidhi Kulkarni }{Louisiana State University}{\hyperlink{Kulkarni.1}{Enhancing the efficiency of CRISPR-Cas9 based gene
+			editing in \emph{Chlamydomonas reinhardtii}}}
+	\CT{9:20--9:40am}{Ignacio Sparrow Munoz}{University of Illinois}{\hyperlink{SparrowMunoz.1}{Continuous directed evolution of soybean (\emph{Glycine max})
+			SBPase}}
+	\CT{9:40--10:00am}{Grant	Steiner}{Loyola University}{\hyperlink{Steiner.1}{\emph{Chlamydomonas reinhardtii} growth is accelerated by
+			constitutive overexpression of a glutathione S-transferase}}
+	\CT{10:00--10:20am}{Alexzandria Stewart}{Alabama State University}{\hyperlink{Stewart.1}{Engineering strategies for continuous biomass collection of Anabaena 33047}
+	}
+	\eventtype{10:20--10:45am}{Career Panel }
+	\tablebreak{10:45--11:00am}{Coffee}
+	\eventtype{11:00am}{Awards Presentations}
+\end{longtable}
+
+%----------------------------------------------------------------------------------------
+%	 LIST OF TALK ABSTRACTS
+%----------------------------------------------------------------------------------------
+
+% Abstract template
+%\abstract
+%	{} % Title
+%	{} % Author(s)
+%	{} % Tag, can be: empty, \KLtag (keynote lecture), \IStag (invited speaker), \CTtag (contributed talk) or \ITtag (invited talk)
+%	{} % Affiliation(s)
+%	{} % Abstract text
+
+\chapter{Talk Abstracts}
+\begin{itemize}
+	\input{talkalphabet}
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	 LIST OF POSTERS
+%----------------------------------------------------------------------------------------
+
+\chapter{Poster Abstracts} 
+\begin{multicols}{3}
+\begin{itemize}
+	\input{posteralphabet}
+\end{itemize}
+\end{multicols}
+\input{talkincludes}
+
+
+\input{posterincludes}
+ 
+%----------------------------------------------------------------------------------------
+%	 USEFUL INFORMATION
+%----------------------------------------------------------------------------------------
+
+
+\chapter{Useful Information}
+
+The conference will be held at the Turkey Run Inn, just inside Turkey Run State Park in Marshall, Indiana October 24-26.
+\textbf{Meals} will be in the main dining area, near the check-in desk. 
+\textbf{Talks, coffee breaks, and posters} will be in the lower level, past the cozy lobby and down the stairs in the meeting area.
+Forwarned is forarmed, the Wi-Fi can be spotty at Turkey Run, so please be prepared with flash drives to transfer presentations as needed.
+
+\section{Organizing committee}
+
+\begin{center}
+	\begin{tabular}{ll}
+	Josh Vermaas (chair)	&	Alizée Malnoë	 (co-chair) \\
+		Plant Research Laboratory	&	Department of Biology \\
+			Department of Biochemistry	&			\\
+		Michigan State University	&		Indiana University \\
+		vermaasj@msu.edu       		&	amalnoe@iu.edu\\
+		
+	\end{tabular}
+\end{center}
+
+\section{Participant List}
+
+\input{participantlist}
+
+\input{codeofconduct}
+
+%----------------------------------------------------------------------------------------
+%	 CLOSING PAGE
+%----------------------------------------------------------------------------------------
+
+\newpage
+
+\thispagestyle{empty} % Suppress headers and footers on this page
+\pagecolor{myblue} % Coloured background
+~
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
