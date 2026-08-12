@@ -4,4 +4,4 @@ updates:
   - package-ecosystem: gitsubmodule
     schedule:
         interval: "daily"
-    directory: /events/TurkeyRun2025
+    directory: /events/TurkeyRun2026
